@@ -1,8 +1,11 @@
 import { Column, Model, Table } from 'sequelize-typescript';
 
-@Table
+@Table({
+  tableName: 'BT_TM_USUARIO',
+  timestamps: false,
+})
 export class User extends Model {
-  @Column
+  @Column({ primaryKey: true })
   ID_USUARIO: number;
 
   @Column
