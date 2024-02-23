@@ -7,7 +7,7 @@ export class UsersController {
 
   @Get()
   async getUsers() {
-    const user = await this.service.findOne('jdoed');
+    const user = await this.service.findOne('afarfanp');
     return user;
   }
 }

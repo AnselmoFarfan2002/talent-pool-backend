@@ -6,10 +6,11 @@ import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from './users/users.model';
+import { ENV_FILE_PATH } from './app.constants';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({ envFilePath: ENV_FILE_PATH }),
     SequelizeModule.forRoot({
       dialect: 'mysql',
       host: process.env.DB_HOST,
